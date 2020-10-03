@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Main1to6;
 import com.company.task1.Factorial_1;
 import com.company.task1.RandomArr_1;
 import com.company.task1.Summator_1;

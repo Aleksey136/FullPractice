@@ -2,13 +2,6 @@ package com.company.task4;
 
 import java.util.Scanner;
 
-interface Movable{
-    void speedCheckPoint(double speed1, double speed2);
-    void setPoint(double x1, double y1, double x2, double y2);
-    void setSpeedPoint(double speed1, double speed2);
-    void outputNewPoint(double x1, double y1, double x2, double y2, double speed1, double speed2);
-}
-
 public class MovableRectangle_6 implements Movable {
     private double x1,y1,x2,y2;
     private double speed1, speed2;
