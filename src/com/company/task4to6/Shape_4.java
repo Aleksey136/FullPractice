@@ -1,4 +1,4 @@
-package com.company.task4;
+package com.company.task4to6;
 
 import java.util.Scanner;
 

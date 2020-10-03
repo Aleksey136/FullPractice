@@ -2,15 +2,13 @@ package com.company.Main1to6;
 import com.company.task1.Factorial_1;
 import com.company.task1.RandomArr_1;
 import com.company.task1.Summator_1;
-import com.company.task2.Dog_2;
 import com.company.task2.Kennel_2;
 import com.company.task2.ShapeTest_2;
 import com.company.task3.BookTest_3;
-import com.company.task3.Book_3;
 import com.company.task3.Circle_3;
 import com.company.task3.Human_3;
-import com.company.task4.MovableRectangle_6;
-import com.company.task4.Shape_4;
+import com.company.task4to6.MovableRectangle_6;
+import com.company.task4to6.Shape_4;
 
 import java.util.Scanner;
 

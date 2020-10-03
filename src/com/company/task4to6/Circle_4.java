@@ -1,4 +1,4 @@
-package com.company.task4;
+package com.company.task4to6;
 
 public class Circle_4 {
     private double radius;

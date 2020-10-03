@@ -1,4 +1,4 @@
-package com.company.task4;
+package com.company.task4to6;
 
 public class Rectangle_4 {
     private double width;

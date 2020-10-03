@@ -1,4 +1,4 @@
-package com.company.task4;
+package com.company.task4to6;
 
 public class Square_4 {
     private double side;

@@ -1,4 +1,4 @@
-package com.company.task4;
+package com.company.task4to6;
 
 interface Movable {
     void speedCheckPoint(double speed1, double speed2);
