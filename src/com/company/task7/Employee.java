@@ -4,10 +4,12 @@ public class Employee {
     private String surname;
     private String name;
     private double baseSalary;
-    public Employee(String surname, String name, double baseSalary) {
+    private String position;
+    public Employee(String surname, String name, double baseSalary, String position) {
         this.surname = surname;
         this.name = name;
         this.baseSalary = baseSalary;
+        this.position = position;
     }
     public String getSurname() {
         return surname;
@@ -26,6 +28,14 @@ public class Employee {
     }
     public void setBaseSalary(double baseSalary) {
         this.baseSalary = baseSalary;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 }
 
