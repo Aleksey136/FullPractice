@@ -1,4 +1,4 @@
-package com.company.task7;
+package com.company.task7to8;
 
 public class TopManager implements EmployeePosition{
     @Override
@@ -8,7 +8,7 @@ public class TopManager implements EmployeePosition{
     @Override
     public double calcSalary(double baseSalary) {
         Company company = new Company();
-        if (company.getIncome()<10_000_000){
+        if (company.getIncomeNumber()<10000000){
             return baseSalary;
         }
         else {

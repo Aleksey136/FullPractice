@@ -1,4 +1,4 @@
-package com.company.task7;
+package com.company.task7to8;
 
 public class Operator implements EmployeePosition{
     @Override

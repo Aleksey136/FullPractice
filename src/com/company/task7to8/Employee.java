@@ -1,4 +1,4 @@
-package com.company.task7;
+package com.company.task7to8;
 
 public class Employee {
     private String surname;
@@ -38,4 +38,3 @@ public class Employee {
         this.position = position;
     }
 }
-
