@@ -9,13 +9,15 @@ public class Employee {
     private String place;
     private String phone;
     private double salary;
-    public Employee(String name, String surname, Date date, String place, String phone, double salary) {
+    private String position;
+    public Employee(String name, String surname, Date date, String place, String phone, double salary, String position) {
         this.name = name;
         this.surname = surname;
         this.date = date;
         this.place = place;
         this.phone = phone;
         this.salary = salary;
+        this.position = position;
     }
     public String getSurname() {
         return surname;
@@ -52,5 +54,12 @@ public class Employee {
     }
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+    public void setPosition(String position) {
+        this.position = position;
     }
 }
