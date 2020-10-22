@@ -1,16 +1,17 @@
 package com.company.task9;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Employee {
     private String surname;
     private String name;
-    private Date date;
+    private Calendar date;
     private String place;
     private String phone;
     private double salary;
     private String position;
-    public Employee(String name, String surname, Date date, String place, String phone, double salary, String position) {
+    public Employee(String name, String surname, Calendar date, String place, String phone, double salary, String position) {
         this.name = name;
         this.surname = surname;
         this.date = date;
@@ -31,12 +32,8 @@ public class Employee {
     public void setName(String name) {
         this.name = name;
     }
-    public Date getDate() {
-        return date;
-    }
-    public void setDate(Date date) {
-        this.date = date;
-    }
+    public Calendar getDate() { return date; }
+    public void setDate(Calendar date) { this.date = date; }
     public String getPlace() {
         return place;
     }
@@ -55,7 +52,6 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
-
     public String getPosition() {
         return position;
     }
