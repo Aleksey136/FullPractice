@@ -119,9 +119,13 @@ public class Calculator extends JFrame {
         buttonDif.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String output = outputText.getText();
-                output = returnSymbol('-',output,first);
-                outputText.setText(output);
+                if (outputText.getText().length()==0)
+                    outputText.append("-");
+                else {
+                    String output = outputText.getText();
+                    output = returnSymbol('-', output, first);
+                    outputText.setText(output);
+                }
             }
         });
         buttonDiv.addActionListener(new ActionListener() {
@@ -177,16 +181,22 @@ public class Calculator extends JFrame {
         if (output.length()!=0){
             if (number!=-1) {
                 returnSym = returnSym.replace('+',symbol);
-                returnSym = returnSym.replace('-',symbol);
                 returnSym = returnSym.replace('/',symbol);
                 returnSym = returnSym.replace('*',symbol);
-                symbolNow = symbol;
+                if (!returnSym.startsWith("-"))
+                    returnSym = returnSym.replace('-',symbol);
+                else
+                {
+                    String returnSym2 = returnSym.substring(1);
+                    returnSym2 = returnSym2.replace('-',symbol);
+                    returnSym = "-" +returnSym2;
+                }
             }
             else {
                 first = Double.parseDouble(output);
                 returnSym = returnSym + "\n" + symbol + "\n";
-                symbolNow = symbol;
             }
+            symbolNow = symbol;
         }
         return returnSym;
     }
