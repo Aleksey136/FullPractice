@@ -1,4 +1,4 @@
-package com.company.java11to12;
+package com.company.task11to12;
 
 
 import javax.swing.*;

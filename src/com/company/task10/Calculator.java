@@ -1,4 +1,4 @@
-package com.company.java10;
+package com.company.task10;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

@@ -1,4 +1,4 @@
-package com.company.java13.task3;
+package com.company.task13.task3;
 
 import java.util.Scanner;
 
@@ -7,7 +7,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите ваш данный номер:");
         String input = scanner.nextLine();
-        String phone = "";
         char[] inputChar = new char[100];
         for (int i = 0; i < input.length(); i++)
             inputChar[i] = input.charAt(i);
