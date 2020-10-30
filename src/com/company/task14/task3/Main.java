@@ -16,6 +16,8 @@ public class Main {
         System.out.println("Введите команду, которую хотите выполнить: (End - чтобы остановить программу)");
         String command = scanner.nextLine();
         while (!command.equals("End")) {
+            while (command.equals(""))
+                command = scanner.nextLine();
             if (command.equals("LIST")) {
                 for (Map.Entry<String, String> output : numbers.entrySet()) {
                     System.out.println("Имя (ключ): " + output.getKey() + "; Телефон (значение): " + output.getValue() + ";");
@@ -30,9 +32,13 @@ public class Main {
                             if (number.getValue().equals(phone)) {
                                 System.out.println("Введите имя, которое вы хотите:");
                                 String name = scanner.nextLine();
+                                while (name.equals(""))
+                                    name = scanner.nextLine();
                                 while (numbers.containsKey(name)) {
                                     System.out.println("Данное имя уже есть, введите другое:");
                                     name = scanner.nextLine();
+                                    while (name.equals(""))
+                                        name = scanner.nextLine();
                                 }
                                 numbers.remove(number.getKey());
                                 numbers.put(name, phone);
@@ -42,9 +48,13 @@ public class Main {
                     } else {
                         System.out.println("Введите имя, которое вы хотите:");
                         String name = scanner.nextLine();
+                        while (name.equals(""))
+                            name = scanner.nextLine();
                         while (numbers.containsKey(name)) {
                             System.out.println("Данное имя уже есть, введите другое:");
                             name = scanner.nextLine();
+                            while (name.equals(""))
+                                name = scanner.nextLine();
                         }
                         numbers.put(name, phone);
                     }
