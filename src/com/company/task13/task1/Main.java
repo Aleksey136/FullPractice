@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         /*String input = scanner.nextLine();*/
-        String input = "Вася заработал 50000 рублей, Петя - 7563 рубля, а Маша - 30000 рублей";
+        String input = "Вася заработал 5400 рублей, Петя - 7563 рубля, а Маша - 30000 рублей";
         char[] inputChar = new char[100];
         input.getChars(input.lastIndexOf("Вася") + 15, input.indexOf(" рублей, Петя") , inputChar , 0);
         String strVasya = "";

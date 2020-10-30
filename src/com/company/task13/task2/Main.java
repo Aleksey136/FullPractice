@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         /*String input = scanner.nextLine();*/
-        String input = "Иванов Сергей Петрович";
+        String input = "Зубен Михаил";
         String firstName = "";
         String lastName = "";
         String patronymicName = "";
