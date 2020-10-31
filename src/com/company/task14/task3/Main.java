@@ -30,19 +30,7 @@ public class Main {
                     if (numbers.containsValue(phone)) {
                         for (Map.Entry<String, String> number : numbers.entrySet()) {
                             if (number.getValue().equals(phone)) {
-                                System.out.println("Введите имя, которое вы хотите:");
-                                String name = scanner.nextLine();
-                                while (name.equals(""))
-                                    name = scanner.nextLine();
-                                while (numbers.containsKey(name)) {
-                                    System.out.println("Данное имя уже есть, введите другое:");
-                                    name = scanner.nextLine();
-                                    while (name.equals(""))
-                                        name = scanner.nextLine();
-                                }
-                                numbers.remove(number.getKey());
-                                numbers.put(name, phone);
-                                break;
+                                System.out.println("Имя у данного номера следующее: " + number.getKey());
                             }
                         }
                     } else {
@@ -57,36 +45,14 @@ public class Main {
                                 name = scanner.nextLine();
                         }
                         numbers.put(name, phone);
+                        System.out.println("Изменено.");
                     }
-                    System.out.println("Изменено.");
                 }
             } else if ((command.charAt(0) >= 'a' && command.charAt(0) <= 'z') || (command.charAt(0) >= 'A' && command.charAt(0) <= 'Z')) {
                 if (numbers.containsKey(command)) {
                     for (Map.Entry<String, String> number : numbers.entrySet()) {
                         if (number.getKey().equals(command)) {
-                            System.out.println("Введите номер, который вы хотите:");
-                            String phone = scanner.nextLine();
-                            phone = numberPhone(phone);
-                            while (phone.equals("-1")) {
-                                System.out.println("Введите номер по возможному формату:");
-                                phone = scanner.nextLine();
-                                phone = numberPhone(phone);
-                            }
-                            System.out.println(phone);
-                            while (numbers.containsValue(phone)) {
-                                System.out.println("Данный номер уже есть, введите другой:");
-                                phone = scanner.nextLine();
-                                phone = numberPhone(phone);
-                                while (phone.equals("-1")) {
-                                    System.out.println("Введите номер по возможному формату:");
-                                    phone = scanner.nextLine();
-                                    phone = numberPhone(phone);
-                                }
-                                System.out.println(phone);
-                            }
-                            numbers.remove(number.getKey());
-                            numbers.put(command, phone);
-                            break;
+                            System.out.println("Номер у этого имени следующий: " + number.getValue());
                         }
                     }
                 }
@@ -112,8 +78,8 @@ public class Main {
                         System.out.println(phone);
                     }
                     numbers.put(command, phone);
+                    System.out.println("Изменено.");
                 }
-                System.out.println("Изменено.");
             }
             else {
                 System.out.println("Неккоректный вход.");
