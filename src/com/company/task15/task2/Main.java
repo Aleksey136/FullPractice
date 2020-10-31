@@ -35,9 +35,9 @@ public class Main {
         start = System.nanoTime();
         boolean output4 = arrayNumberTree.contains(number);
         long end4 = System.nanoTime()-start;
-        System.out.println("Поиск перебором: " + output1 + ", поиск занял: " + end1);
-        System.out.println("Бинарный поиск: " + output2 + ", поиск занял: " + end2);
-        System.out.println("Поиск в HashSet: " + output3 + ", поиск занял: " + end3);
-        System.out.println("Поиск в TreeSet: " + output4 + ", поиск занял: " + end4);
+        System.out.println("Поиск перебором: " + output1 + ", поиск занял: " + end1 + " нс");
+        System.out.println("Бинарный поиск: " + output2 + ", поиск занял: " + end2 + " нс");
+        System.out.println("Поиск в HashSet: " + output3 + ", поиск занял: " + end3 + " нс");
+        System.out.println("Поиск в TreeSet: " + output4 + ", поиск занял: " + end4 + " нс");
     }
 }
