@@ -47,16 +47,20 @@ public class Main {
                 else
                     System.out.println("Неккоректный ввод.");
 
-            } else if (words[0].equals("ADD") && (words.length>2) && ((Integer.parseInt(words[1])>=0)&&(Integer.parseInt(words[1])<deals.size()+1))) {
+            } else if (words[0].equals("ADD") && (words.length>2) && (Integer.parseInt(words[1])>=0)) {
                 int intPartCommandNumber = Integer.parseInt(words[1]);
-                if (intPartCommandNumber >= 0 && intPartCommandNumber < deals.size()+1) {
+                if (intPartCommandNumber >= 0 && intPartCommandNumber < deals.size()) {
                     String word = "";
                     for (int i = 2; i < words.length; i++)
                         word += words[i] + " ";
                     deals.add(intPartCommandNumber, word);
                 }
-                else
-                    System.out.println("Неккоректный ввод.");
+                else{
+                    String word = "";
+                    for (int i = 2; i < words.length; i++)
+                        word += words[i] + " ";
+                    deals.add(deals.size(), word);
+                }
             } else
                 System.out.println("Неккоректный ввод.");
 
