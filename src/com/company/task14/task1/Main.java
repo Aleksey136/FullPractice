@@ -47,9 +47,9 @@ public class Main {
                 else
                     System.out.println("Неккоректный ввод.");
 
-            } else if (words[0].equals("ADD") && (words.length>2) && ((Integer.parseInt(words[1])>=0)&&(Integer.parseInt(words[1])<deals.size()))) {
+            } else if (words[0].equals("ADD") && (words.length>2) && ((Integer.parseInt(words[1])>=0)&&(Integer.parseInt(words[1])<deals.size()+1))) {
                 int intPartCommandNumber = Integer.parseInt(words[1]);
-                if (intPartCommandNumber >= 0 && intPartCommandNumber < deals.size()) {
+                if (intPartCommandNumber >= 0 && intPartCommandNumber < deals.size()+1) {
                     String word = "";
                     for (int i = 2; i < words.length; i++)
                         word += words[i] + " ";
