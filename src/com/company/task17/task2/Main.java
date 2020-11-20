@@ -13,9 +13,9 @@ import java.net.URL;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Начало работы программы.");
+        System.out.println("Начало работы программы. Список изображений:");
         try {
-            Document document = Jsoup.connect("https://www.mirea.ru/").get();
+            Document document = Jsoup.connect("https://www.mirea.ru/").userAgent("Chrome/4.0.249.0 Safari/532.5").referrer("http://www.google.com").get();
             Elements listImages = document.select("img");
             for (Element element : listImages) {
                 String absSrc = element.attr("abs:src");
@@ -27,6 +27,8 @@ public class Main {
                     {
                         for (int j = i+1; j<absSrc.length();j++)
                         {
+                            if (absSrc.charAt(j) == '?')
+                                break;
                             strImageName += absSrc.charAt(j);
                         }
                         break;
@@ -35,7 +37,7 @@ public class Main {
                 InputStream in = urlImage.openStream();
                 byte[] buffer = new byte[4096];
                 int n = -1;
-                File file = new File("images/" + strImageName);
+                File file = new File("images");
                 if (!file.exists()) {
                     file.mkdirs();
                 }
@@ -44,8 +46,7 @@ public class Main {
                     os.write(buffer, 0, n);
                 }
                 os.close();
-                System.out.println("Image saved");
-                System.out.println(absSrc);
+                System.out.println(strImageName + ";");
             }
 
         }
