@@ -27,7 +27,7 @@ public class Main {
             int i1 = 0;
             assert files != null;
             int i2 = files.length/quantityOfCores;
-            while (i2 != files.length + files.length/quantityOfCores){
+            while (i2 < files.length + files.length/quantityOfCores){
                 File[] files1 = new File[i2-i1];
                 System.arraycopy(files, i1, files1, 0, files1.length);
                 i1+= files.length/quantityOfCores;
