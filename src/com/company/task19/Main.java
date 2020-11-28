@@ -14,9 +14,7 @@ public class Main {
         long start = System.currentTimeMillis();
 
         System.out.println("Количество потоков: " + Runtime.getRuntime().availableProcessors());
-
         File[] files = srcDir.listFiles();
-
         try
         {
             if (!Files.exists(Paths.get(dstFolder)))
@@ -24,6 +22,11 @@ public class Main {
                 Files.createDirectories(Paths.get(dstFolder));
             }
             int quantityOfCores = Runtime.getRuntime().availableProcessors();
+            if (Runtime.getRuntime().availableProcessors() > files.length)
+            {
+                System.out.println("Количество потоков больше, чем количество фотографий, поэтому будет использоваться меньше потоков.");
+                quantityOfCores = files.length;
+            }
             int i1 = 0;
             assert files != null;
             int i2 = files.length/quantityOfCores;
