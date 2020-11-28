@@ -22,13 +22,13 @@ public class Main {
                 Files.createDirectories(Paths.get(dstFolder));
             }
             int quantityOfCores = Runtime.getRuntime().availableProcessors();
+            assert files != null;
             if (Runtime.getRuntime().availableProcessors() > files.length)
             {
                 System.out.println("Количество потоков больше, чем количество фотографий, поэтому будет использоваться меньше потоков.");
                 quantityOfCores = files.length;
             }
             int i1 = 0;
-            assert files != null;
             int i2 = files.length/quantityOfCores;
             while (i2 < files.length + files.length/quantityOfCores){
                 File[] files1 = new File[i2-i1];
