@@ -7,8 +7,8 @@ public class Company {
         int number = employees.size();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Добавьте нового сотрудника. Введите имя и должность сотрудника: ");
-        String name = scanner.nextLine();
-        String position = scanner.nextLine();
+        String name = scanner.next();
+        String position = scanner.next();
         Employee employee = new Employee(name,"UserPlus", new GregorianCalendar(2002,0,1),
                 "UserStreet","80000000000", new HandleEmployees().getSalaryOfPosition(position),position);
         employees.add(employee);
